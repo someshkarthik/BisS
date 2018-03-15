@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "868826574960",
+    "firebase_url": "https://dakshproject-85663.firebaseio.com",
+    "project_id": "dakshproject-85663",
+    "storage_bucket": "dakshproject-85663.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868826574960:android:3dc249071ddaf026",
+        "android_client_info": {
+          "package_name": "com.somesh.myproject.android.dakshproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868826574960-9afnjdfgsufka0rkddittui4usidikok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.somesh.myproject.android.dakshproject",
+            "certificate_hash": "ff9cd0aaeb170b0c73ac1dec6ddc44b3354f3363"
+          }
+        },
+        {
+          "client_id": "868826574960-iuf22c57ph53vmql5gkffqjpah733h4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFD1I8Lr3tkNHBJzspeWh0MGMKpPyWCks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868826574960-iuf22c57ph53vmql5gkffqjpah733h4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
