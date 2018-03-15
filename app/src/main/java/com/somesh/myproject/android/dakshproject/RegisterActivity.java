@@ -2,10 +2,10 @@ package com.somesh.myproject.android.dakshproject;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -19,7 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText empid_et,username_et,password_et,emailId_et,phoneno_et;
+
+    EditText empid_et, username_et, password_et, emailId_et, phoneno_et;
     FloatingActionButton register_fab;
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
@@ -32,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         empid_et = findViewById(R.id.Register_empid_et);
         username_et = findViewById(R.id.Register_username_et);
         password_et = findViewById(R.id.Register_password_et);
-        emailId_et =findViewById(R.id.Register_emailid_et);
+        emailId_et = findViewById(R.id.Register_emailid_et);
         phoneno_et = findViewById(R.id.Register_phoneno_et);
         register_fab = findViewById(R.id.Register_done_fab);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -45,13 +46,14 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
     private void register() {
         final String username = username_et.getText().toString();
         final String email = emailId_et.getText().toString();
         final String phoneno = phoneno_et.getText().toString();
         final String empid = empid_et.getText().toString();
         String password = password_et.getText().toString();
-        if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(phoneno) &&!TextUtils.isEmpty(empid)) {
+        if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(phoneno) && !TextUtils.isEmpty(empid)) {
             progressDialog.setMessage("Registering");
             progressDialog.show();
             firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -73,12 +75,9 @@ public class RegisterActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
-
-
                 }
             });
-        }
-        else
+        } else
             Toast.makeText(this, "Please complete the form", Toast.LENGTH_SHORT).show();
     }
 }
